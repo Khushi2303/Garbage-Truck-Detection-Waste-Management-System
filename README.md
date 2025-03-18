@@ -28,7 +28,7 @@ The **Garbage Truck Tracking System** is a web-based application that allows use
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/garbage-truck-tracking.git
+[git clone https://github.com/yourusername/garbage-truck-tracking.git](
 cd garbage-truck-tracking
 ```
 
