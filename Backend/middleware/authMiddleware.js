@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
     const token = req.header("Authorization");
+    console.log("Received Token:", token);  // Debugging
 
     if (!token) {
         return res.status(401).json({ message: "Access Denied. No token provided." });
@@ -9,9 +10,11 @@ const authMiddleware = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token.replace("Bearer ", ""), process.env.JWT_SECRET);
-        req.user = decoded; // Attach decoded user data to request
+        console.log("Decoded Token:", decoded);  // Debugging
+        req.user = decoded;
         next();
     } catch (error) {
+        console.error("JWT Verification Error:", error.message);
         res.status(400).json({ message: "Invalid Token" });
     }
 };
