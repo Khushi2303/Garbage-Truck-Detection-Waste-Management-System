@@ -39,7 +39,7 @@ export default function TruckTrackingMap() {
   useEffect(() => {
     const fetchTruckData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/trucks/67d945da46a692813b5afbcc');
+        const response = await fetch('https://backend-grabage-tracking.onrender.com/api/trucks/67d945da46a692813b5afbcc');
         const data = await response.json();
         setTruck(data);
 
