@@ -21,6 +21,14 @@ const truckIcon = new L.Icon({
   popupAnchor: [0, -40]
 });
 
+// Custom user location icon
+const userIcon = new L.Icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/149/149060.png', // Change this URL to any user icon you like
+  iconSize: [35, 35],
+  iconAnchor: [17, 35],
+  popupAnchor: [0, -35]
+});
+
 // Component to handle auto-zooming
 function AutoZoom({ position }: { position: [number, number] }) {
   const map = useMap();
@@ -88,9 +96,9 @@ export default function TruckTrackingMap() {
         {/* Auto-Zoom to Truck Location */}
         {truck && <AutoZoom position={[truck.currentLocation.lat, truck.currentLocation.lng]} />}
 
-        {/* User Location Marker */}
+        {/* User Location Marker with Custom Icon */}
         {userLocation && (
-          <Marker position={userLocation}>
+          <Marker position={userLocation} icon={userIcon}>
             <Popup>
               <h3 className="font-bold">Your Location</h3>
               <p className="text-sm">Lat: {userLocation[0]}</p>
