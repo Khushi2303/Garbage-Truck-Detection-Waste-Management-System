@@ -1,4 +1,5 @@
 # Garbage-Truck-Detection-Waste-Management-System
+https://garbage-truck-detection-waste-management-system-wfgb.vercel.app
 
 
 ## 🛠 Project Overview
