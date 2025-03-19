@@ -17,7 +17,7 @@ interface TruckContextType {
 
 const TruckContext = createContext<TruckContextType | null>(null);
 
-const BACKEND_URL = 'http://localhost:5001';
+const BACKEND_URL = 'https://backend-grabage-tracking.onrender.com';
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 2000;
 

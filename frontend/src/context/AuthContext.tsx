@@ -19,7 +19,7 @@ interface User {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-const BACKEND_URL = 'http://localhost:5001';
+const BACKEND_URL = 'https://backend-grabage-tracking.onrender.com';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
